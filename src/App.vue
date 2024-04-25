@@ -1,20 +1,32 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <Header />
+  <SignupForm />
+  <Footer />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Modal from './components/Modal.vue'
+import SignupForm from './components/SignupForm.vue'
+import Header from './components/Header.vue'
+import Footer from './components/Footer.vue'
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components : { Header, SignupForm, Footer},
+  data(){
+    
+    return {
+      title:'My first app',  
+    }
+  },
+  methods:{
+    }
   }
-}
+
 </script>
 
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -23,4 +35,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
